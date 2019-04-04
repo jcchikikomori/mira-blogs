@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
     <div class="page-header">
-      <h1>Vue.js 2 & Firebase <small>Sample Application by CodingTheSmartWay.com</small></h1>
+      <h1>Vue.js 2 & Firebase Demo</h1>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -48,6 +48,19 @@
         </table>
       </div>
     </div>
+
+    <div>
+      <p>
+        <!-- use router-link component for navigation. -->
+        <!-- specify the link by passing the `to` prop. -->
+        <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+        <router-link to="/blog">Go to Blog</router-link><br />
+        <router-link to="/b1">Go to B1</router-link>
+      </p>
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script>
@@ -75,6 +88,7 @@ export default {
 
   data () {
     return {
+      // returning new value (after create)
       newBook: {
         title: '',
         author: '',
