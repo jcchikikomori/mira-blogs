@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo3.png" width="300">
+      <b-jumbotron header="Mira's Mess" lead="Chell's Joya">
+        <img alt="Vue logo" src="./assets/logo3.png" width="300">
+      </b-jumbotron>
     <router-view></router-view>
   </div>
 </template>
@@ -18,6 +20,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
