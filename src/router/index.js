@@ -1,21 +1,30 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import B1 from '@/components/test/B1'
+import VueRouter from 'vue-router'
+import BoardList from '@/components/BoardList'
+import ShowBoard from '@/components/ShowBoard'
+import AddBoard from '@/components/AddBoard'
+import EditBoard from '@/components/EditBoard'
 
-Vue.use(Router)
-
-export default new Router({
+export default new VueRouter({
   routes: [
     {
-      path: '/blog',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/',
+      name: 'BoardList',
+      component: BoardList
     },
     {
-      path: '/b1',
-      name: 'B1',
-      component: B1
+      path: '/show-board/:id',
+      name: 'ShowBoard',
+      component: ShowBoard
+    },
+    {
+      path: '/add-board',
+      name: 'AddBoard',
+      component: AddBoard
+    },
+    {
+      path: '/edit-board/:id',
+      name: 'EditBoard',
+      component: EditBoard
     }
   ]
 })
