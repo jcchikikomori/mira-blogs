@@ -1,4 +1,8 @@
 import VueRouter from 'vue-router'
+
+import About from '@/components/About'
+import Contact from '@/components/Contact'
+
 import BoardList from '@/components/BoardList'
 import ShowBoard from '@/components/ShowBoard'
 import AddBoard from '@/components/AddBoard'
@@ -10,6 +14,16 @@ export default new VueRouter({
       path: '/',
       name: 'BoardList',
       component: BoardList
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
     },
     {
       path: '/show-board/:id',
